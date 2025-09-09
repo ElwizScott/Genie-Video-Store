@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane onMousePressed="#click" prefHeight="200.0" prefWidth="200.0" style="-fx-background-radius: 20;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Signin.ItemController">
+   <children>
+      <ImageView fx:id="iv" fitHeight="120.0" fitWidth="120.0" layoutX="40.0" layoutY="66.0" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="title" layoutX="14.0" layoutY="14.0" text="Medal of Honour">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="fee" layoutX="24.0" layoutY="34.0" text="3.99">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="34.0" text="\$">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="rentalType" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="117.0" layoutY="34.0" prefHeight="20.0" prefWidth="65.0" text="Game" textAlignment="RIGHT">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

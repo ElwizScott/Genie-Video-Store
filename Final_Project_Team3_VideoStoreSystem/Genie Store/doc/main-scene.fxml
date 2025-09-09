@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Signin.MainController">
+   <children>
+      <ImageView fitHeight="400.0" fitWidth="720.0" layoutX="-110.0" opacity="0.9" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Radar.jpg" />
+         </image>
+      </ImageView>
+      <TextField fx:id="mainUsernameText" layoutX="211.0" layoutY="200.0" />
+      <PasswordField fx:id="mainPasswordHidden" layoutX="211.0" layoutY="232.0" />
+      <TextField fx:id="mainPasswordText" layoutX="211.0" layoutY="232.0" />
+      <Button fx:id="mainAdminSignInBt" layoutX="475.0" layoutY="14.0" mnemonicParsing="false" onAction="#switchToAdminMenu" prefHeight="22.0" prefWidth="111.0" text="Admin Sign in" textFill="#5500ff" />
+      <Label layoutX="143.0" layoutY="205.0" text="Username:" />
+      <Label layoutX="145.0" layoutY="237.0" text="Password:" />
+      <Button fx:id="mainSignInBt" layoutX="210.0" layoutY="296.0" mnemonicParsing="false" onAction="#login" prefHeight="32.0" prefWidth="179.0" text="Sign in" textFill="#5500ff" />
+      <Button fx:id="mainSignUpBt" layoutX="475.0" layoutY="296.0" mnemonicParsing="false" onAction="#switchToSignUp" text="Sign up" textFill="#5500ff" />
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="148.0" layoutY="81.0" prefHeight="78.0" prefWidth="303.0" text="Genie's Video Store" textAlignment="CENTER" textFill="#7c00c4">
+         <font>
+            <Font name="Arial Bold" size="30.0" />
+         </font>
+      </Label>
+      <CheckBox fx:id="mainCheckBox" layoutX="407.0" layoutY="237.0" mnemonicParsing="false" onAction="#changeVisibility" text="Show Password" />
+      <Label fx:id="mainErrorMessage" alignment="CENTER" contentDisplay="CENTER" layoutX="-1.0" layoutY="273.0" prefHeight="22.0" prefWidth="600.0" text="  " textAlignment="CENTER" textFill="RED" />
+      <Button fx:id="mainAccessBt" layoutX="210.0" layoutY="296.0" mnemonicParsing="false" onAction="#switchToCustomerMenu" prefHeight="32.0" prefWidth="179.0" text="Access" visible="false">
+         <font>
+            <Font name="System Bold" size="14.399999618530273" />
+         </font>
+      </Button>
+      <Label layoutX="14.0" layoutY="14.0" text="Team 3 Final Project" textFill="WHITE">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

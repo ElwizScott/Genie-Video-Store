@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #e4e4e4;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Signin.AdminMenuItemController">
+   <children>
+      <ButtonBar prefHeight="50.0" prefWidth="800.0">
+        <buttons>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="27.0" prefWidth="662.0" text="ITEM" textFill="#ff6e7f">
+               <font>
+                  <Font name="Arial Bold Italic" size="24.0" />
+               </font>
+            </Label>
+          <Button fx:id="customer" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#switchToAdminMenu" style="-fx-background-color: #00ffd6;" text="Customer" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="14.399999618530273" />
+               </font>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" style="-fx-background-color: #ff6e7f;" text="Item" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.399999618530273" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#switchToMainScene" style="-fx-background-color: #00aaff;" text="Log out" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.399999618530273" />
+               </font>
+            </Button>
+        </buttons>
+         <VBox.margin>
+            <Insets right="10.0" />
+         </VBox.margin>
+      </ButtonBar>
+      <TabPane prefHeight="550.0" prefWidth="800.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Search">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="600.0" fitWidth="950.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Piggy%20Pink.jpg" />
+                           </image>
+                        </ImageView>
+                        <TextField fx:id="searchID" layoutX="72.0" layoutY="67.0" prefHeight="32.0" prefWidth="124.0" promptText="Ixxx-yyyy" />
+                        <TextField fx:id="searchTitle" layoutX="310.0" layoutY="67.0" promptText="Title" />
+                        <Label layoutX="72.0" layoutY="44.0" text="Search by item ID:" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="14.399999618530273" />
+                           </font></Label>
+                        <Button fx:id="searchIDBT" layoutX="196.0" layoutY="67.0" mnemonicParsing="false" onAction="#setSearchIDBT" text="Search" />
+                        <Button fx:id="searchTitleBT" layoutX="489.0" layoutY="67.0" mnemonicParsing="false" onAction="#setSearchTitleBT" text="Search" />
+                        <Accordion layoutX="108.0" layoutY="191.0" />
+                        <AnchorPane layoutX="50.0" layoutY="125.0" prefHeight="350.0" prefWidth="700.0" style="-fx-background-color: white; -fx-background-radius: 20;">
+                           <children>
+                              <Label layoutX="50.0" layoutY="250.0" text="Item ID: ">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="labelID" layoutX="126.0" layoutY="248.0" text="Label">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="333.0" layoutY="35.0" text="Title:">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="333.0" layoutY="62.0" text="Rent type:">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="333.0" layoutY="89.0" text="Loan type:">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="333.0" layoutY="143.0" text="Rental fee:">
+                                 <font>
+                                    <Font name="Arial Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="333.0" layoutY="170.0" text="Genre:">
+                                 <font>
+                                    <Font name="Arial Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fx:id="controllerS" fitHeight="171.0" fitWidth="200.0" layoutX="50.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                                 <image>
+                                    <Image url="@../game1.png" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="labelTitle" layoutX="459.0" layoutY="36.0">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="labelRentType" layoutX="459.0" layoutY="62.0">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="labelLoanType" layoutX="459.0" layoutY="89.0">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="labelQuantity" layoutX="459.0" layoutY="116.0">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="labelRentalFee" layoutX="459.0" layoutY="143.0">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="labelGenre" layoutX="459.0" layoutY="170.0">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="labelStatus" layoutX="459.0" layoutY="247.0">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="333.0" layoutY="119.0" text="Quantity:">
+                                 <font>
+                                    <Font name="Arial Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="331.0" layoutY="250.0" text="Status:">
+                                 <font>
+                                    <Font name="Arial Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fx:id="DVDS" fitHeight="150.0" fitWidth="200.0" layoutX="75.0" layoutY="46.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                                 <image>
+                                    <Image url="@../dvd1.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fx:id="recordS" fitHeight="150.0" fitWidth="200.0" layoutX="75.0" layoutY="44.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                                 <image>
+                                    <Image url="@../record1.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </AnchorPane>
+                        <Label fx:id="searchMessage" layoutX="578.0" layoutY="72.0" textFill="RED" />
+                        <Label layoutX="310.0" layoutY="44.0" text="Search by Title:" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="14.399999618530273" />
+                           </font>
+                        </Label>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Add">
+            <content>
+              <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="0.0" minWidth="0.0" prefHeight="525.0" prefWidth="800.0">
+                     <children>
+                        <ImageView fitHeight="600.0" fitWidth="950.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Piggy%20Pink.jpg" />
+                           </image>
+                        </ImageView>
+                        <TextField fx:id="IDText" layoutX="249.0" layoutY="116.0" prefHeight="32.0" prefWidth="142.0" promptText="Ixxx-yyyy">
+                           <font>
+                              <Font name="Arial" size="14.399999618530273" />
+                           </font></TextField>
+                        <TextField fx:id="titleText" layoutX="249.0" layoutY="148.0" prefHeight="32.0" prefWidth="142.0" promptText="Required" />
+                        <TextField fx:id="quantityText" layoutX="249.0" layoutY="244.0" prefHeight="32.0" prefWidth="142.0" promptText="Required" />
+                        <TextField fx:id="feeText" layoutX="249.0" layoutY="276.0" prefHeight="32.0" prefWidth="142.0" promptText="Required" />
+                        <Label layoutX="163.0" layoutY="121.0" text="ID:" />
+                        <Label layoutX="163.0" layoutY="153.0" text="Title:" />
+                        <Label layoutX="163.0" layoutY="185.0" text="Rent type:" />
+                        <Label layoutX="163.0" layoutY="217.0" text="Loan type:" />
+                        <Label layoutX="163.0" layoutY="249.0" text="Quantity:" />
+                        <Label layoutX="163.0" layoutY="280.0" text="Rental fee:" />
+                        <TextField fx:id="genreText" layoutX="249.0" layoutY="308.0" prefHeight="32.0" prefWidth="142.0" promptText="Required" />
+                        <Label layoutX="163.0" layoutY="313.0" text="Genre:" />
+                        <Button fx:id="addItemBt" layoutX="289.0" layoutY="367.0" mnemonicParsing="false" onAction="#setOnAddItemBt" text="Add item" />
+                        <Label fx:id="message" layoutX="399.0" layoutY="372.0" prefHeight="22.0" prefWidth="285.0" textFill="RED">
+                           <effect>
+                              <Glow />
+                           </effect>
+                        </Label>
+                        <Label fx:id="message1" layoutX="399.0" layoutY="121.0" text="*Note: This area cannot be left blank*" textFill="RED" visible="false" />
+                        <Label fx:id="message2" layoutX="399.0" layoutY="153.0" text="*Note: This area cannot be left blank*" textFill="RED" visible="false" />
+                        <Label fx:id="message3" layoutX="399.0" layoutY="185.0" text="*Note: This area cannot be left blank*" textFill="RED" visible="false" />
+                        <Label fx:id="message4" layoutX="399.0" layoutY="217.0" text="*Note: This area cannot be left blank*" textFill="RED" visible="false" />
+                        <Label fx:id="message5" layoutX="399.0" layoutY="249.0" text="*Note: This area cannot be left blank*" textFill="RED" visible="false" />
+                        <Label fx:id="message6" layoutX="399.0" layoutY="280.0" text="*Note: This area cannot be left blank*" textFill="RED" visible="false" />
+                        <Label fx:id="message7" layoutX="399.0" layoutY="312.0" text="*Note: This area cannot be left blank*" textFill="RED" visible="false" />
+                        <ChoiceBox fx:id="rentTypeChoiceBox" layoutX="249.0" layoutY="180.0" prefHeight="32.0" prefWidth="142.0" />
+                        <ChoiceBox fx:id="loanTypeChoiceBox" layoutX="249.0" layoutY="212.0" prefHeight="32.0" prefWidth="142.0" />
+                        <Label layoutX="14.0" layoutY="14.0" text="Fill in the infomation of a new item">
+                           <font>
+                              <Font name="Arial" size="24.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Update">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="600.0" fitWidth="950.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Piggy%20Pink.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="14.0" layoutY="14.0" text="Type in ID of the Item you need to update.">
+                           <font>
+                              <Font name="Arial" size="24.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="updateID" alignment="CENTER" layoutX="162.0" layoutY="221.0" prefHeight="32.0" prefWidth="150.0" promptText="Ixxx-yyyy" />
+                        <Label layoutX="208.0" layoutY="193.0" text="Item ID">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="updateButton" layoutX="161.0" layoutY="316.0" mnemonicParsing="false" onAction="#setUpdateBT" prefHeight="38.0" prefWidth="151.0" text="UPDATE">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Button>
+                        <TextField fx:id="updateTitle" alignment="CENTER" layoutX="488.0" layoutY="161.0" prefHeight="32.0" prefWidth="150.0" />
+                        <TextField fx:id="updateQuantity" alignment="CENTER" layoutX="488.0" layoutY="253.0" prefHeight="32.0" prefWidth="150.0" />
+                        <TextField fx:id="updateRentalFee" alignment="CENTER" layoutX="488.0" layoutY="285.0" prefHeight="32.0" prefWidth="150.0" />
+                        <TextField fx:id="updateGenre" alignment="CENTER" layoutX="488.0" layoutY="316.0" prefHeight="32.0" prefWidth="150.0" />
+                        <Label layoutX="409.0" layoutY="166.0" text="Title:" />
+                        <Label layoutX="409.0" layoutY="195.0" text="Rent type:" />
+                        <Label layoutX="409.0" layoutY="226.0" text="Loan type:" />
+                        <Label layoutX="409.0" layoutY="258.0" text="Quantity:" />
+                        <Label layoutX="409.0" layoutY="290.0" text="Rental fee:" />
+                        <Label layoutX="409.0" layoutY="321.0" text="Genre:" />
+                        <Label fx:id="updateMessage" layoutX="162.0" layoutY="290.0" textFill="RED" />
+                        <ChoiceBox fx:id="updateRentType" layoutX="488.0" layoutY="190.0" prefWidth="150.0" />
+                        <ChoiceBox fx:id="updateLoanType" layoutX="488.0" layoutY="221.0" prefWidth="150.0" />
+                        <Button fx:id="updateLoadBT" layoutX="313.0" layoutY="221.0" mnemonicParsing="false" onAction="#setUpdateLoadBT" prefHeight="30.0" prefWidth="57.0" text="Load">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Button>
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Delete">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="390.0" prefWidth="800.0">
+                     <children>
+                        <ImageView fitHeight="600.0" fitWidth="950.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Piggy%20Pink.jpg" />
+                           </image>
+                        </ImageView>
+                        <TextField fx:id="deleteTF" alignment="CENTER" layoutX="311.0" layoutY="159.0" promptText="Ixxx-yyyy">
+                           <font>
+                              <Font name="Arial" size="14.0" />
+                           </font>
+                        </TextField>
+                        <Button fx:id="deleteBT" layoutX="311.0" layoutY="219.0" mnemonicParsing="false" onAction="#deleteItem" prefHeight="48.0" prefWidth="178.0" text="DELETE" textAlignment="CENTER" textFill="#712254">
+                           <font>
+                              <Font name="Arial Bold" size="18.0" />
+                           </font>
+                        </Button>
+                        <Label layoutX="14.0" layoutY="14.0" text="Type in the ID of the Item you want to delete.">
+                           <font>
+                              <Font name="Arial" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="deleteMessage" layoutX="311.0" layoutY="124.0" textFill="RED">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="All items">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="600.0" fitWidth="950.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Piggy%20Pink.jpg" />
+                           </image>
+                        </ImageView>
+                        <RadioButton fx:id="sortByID" layoutX="34.0" layoutY="116.0" mnemonicParsing="false" onAction="#setRadio1" text="Sort by ID" textFill="WHITE" />
+                        <RadioButton fx:id="sortByTitle" layoutX="34.0" layoutY="138.0" mnemonicParsing="false" onAction="#setRadio2" text="Sort by Title" textFill="WHITE" />
+                        <Label layoutX="34.0" layoutY="87.0" text="Filter" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextArea fx:id="allItems" layoutX="238.0" layoutY="22.0" prefHeight="472.0" prefWidth="542.0" />
+                        <Button fx:id="loadAllItems" layoutX="34.0" layoutY="22.0" mnemonicParsing="false" onAction="#setLoadAllBT" text="Load all items" textFill="#ff5e00" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Out of stock items">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="600.0" fitWidth="950.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Piggy%20Pink.jpg" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="check" layoutX="50.0" layoutY="50.0" mnemonicParsing="false" onAction="#setCheckBt" text="Check for out of stock items" textFill="#ff7500">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Button>
+                        <TextArea fx:id="outOfStock" layoutX="50.0" layoutY="125.0" prefHeight="350.0" prefWidth="690.0" />
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</VBox>

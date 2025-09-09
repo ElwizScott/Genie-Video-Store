@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Signin.CustomerMenuController">
+   <children>
+      <TabPane prefHeight="600.0" prefWidth="800.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Home Page">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="269.0" prefWidth="473.0">
+                     <children>
+                        <ImageView fitHeight="629.0" fitWidth="1016.0" layoutX="-216.0" layoutY="-4.0" opacity="0.8" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Vice%20City.jpg" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="ivStore" fitHeight="132.0" fitWidth="128.0" layoutX="65.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../store.png" />
+                           </image></ImageView>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="244.0" layoutY="38.0" prefHeight="78.0" prefWidth="362.0" text="Genie's Video Store" textAlignment="CENTER" textFill="#9e00c2">
+                           <font>
+                              <Font name="Arial Bold" size="36.0" />
+                           </font>
+                        </Label>
+                        <ScrollPane fx:id="scroll" layoutX="255.0" layoutY="150.0" prefHeight="390.0" prefWidth="530.0" style="-fx-background-color: #ffffff;">
+                           <content>
+                              <GridPane fx:id="grid" prefHeight="62.0" prefWidth="110.0">
+                                <rowConstraints>
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                              </GridPane>
+                           </content>
+                        </ScrollPane>
+                        <AnchorPane layoutX="30.0" layoutY="150.0" prefHeight="390.0" prefWidth="200.0" style="-fx-background-color: #ffffff; -fx-background-radius: 30;">
+                           <children>
+                              <Label fx:id="rentalFee" layoutX="17.0" layoutY="14.0" prefHeight="20.0" prefWidth="53.0">
+                                 <font>
+                                    <Font name="VNtimes New Roman Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="itemID" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="87.0" layoutY="14.0" prefHeight="20.0" prefWidth="88.0" textAlignment="RIGHT">
+                                 <font>
+                                    <Font name="VNtimes New Roman Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fx:id="itemIV" fitHeight="103.0" fitWidth="122.0" layoutX="46.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" />
+                              <Label fx:id="title" alignment="CENTER" contentDisplay="CENTER" layoutY="184.0" prefHeight="22.0" prefWidth="202.0" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="System Bold" size="14.399999618530273" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="20.0" layoutY="234.0" text="Rental Type:" />
+                              <Label layoutX="20.0" layoutY="256.0" text="Loan Type:" />
+                              <Label layoutX="20.0" layoutY="278.0" text="Remaining:" />
+                              <Label fx:id="rentalType" layoutX="107.0" layoutY="234.0" />
+                              <Label fx:id="loanType" layoutX="107.0" layoutY="256.0" />
+                              <Label fx:id="quantity" layoutX="107.0" layoutY="278.0" />
+                              <Button layoutX="77.0" layoutY="344.0" mnemonicParsing="false" onAction="#setRentBT" text="Rent" />
+                           </children></AnchorPane>
+                        <Label fx:id="rentMessage" alignment="CENTER" contentDisplay="CENTER" layoutX="253.0" layoutY="116.0" prefHeight="22.0" prefWidth="534.0" textAlignment="CENTER" textFill="RED" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Item List">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="575.0" fitWidth="1005.0" layoutX="-205.0" layoutY="-1.0" opacity="0.8" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Vice%20City.jpg" />
+                           </image>
+                        </ImageView>
+                        <AnchorPane layoutX="50.0" layoutY="50.0" prefHeight="470.0" prefWidth="700.0" style="-fx-background-color: #ffffff; -fx-background-radius: 20;">
+                           <children>
+                              <ListView fx:id="rentalList" layoutX="40.0" layoutY="69.0" prefHeight="350.0" prefWidth="200.0" />
+                              <Label alignment="CENTER" contentDisplay="CENTER" layoutX="40.0" layoutY="33.0" prefHeight="20.0" prefWidth="199.0" text="Your Rental List" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="VNtimes New Roman Bold" size="24.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fx:id="ivItem" fitHeight="103.0" fitWidth="122.0" layoutX="302.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true" />
+                              <Label layoutX="436.0" layoutY="69.0" prefHeight="20.0" prefWidth="46.0" text="Title:">
+                                 <font>
+                                    <Font name="VNtimes New Roman Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="436.0" layoutY="89.0" prefHeight="20.0" prefWidth="94.0" text="Rental Fee:">
+                                 <font>
+                                    <Font name="VNtimes New Roman Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="438.0" layoutY="121.0" prefHeight="20.0" prefWidth="70.0" text="Item ID:">
+                                 <font>
+                                    <Font name="VNtimes New Roman Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="438.0" layoutY="143.0" prefHeight="20.0" prefWidth="84.0" text="Rent type:">
+                                 <font>
+                                    <Font name="VNtimes New Roman Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="438.0" layoutY="163.0" prefHeight="20.0" prefWidth="87.0" text="Loan type:">
+                                 <font>
+                                    <Font name="VNtimes New Roman Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="labelID" layoutX="514.0" layoutY="120.0" />
+                              <Label fx:id="labelTitle" layoutX="483.0" layoutY="68.0" />
+                              <Label fx:id="labelRentalFee" layoutX="531.0" layoutY="88.0" />
+                              <Label fx:id="labelRentType" layoutX="525.0" layoutY="142.0" />
+                              <Label fx:id="labelLoanType" layoutX="531.0" layoutY="162.0" />
+                              <Button layoutX="315.0" layoutY="235.0" mnemonicParsing="false" onAction="#returnItem" text="Return Item">
+                                 <font>
+                                    <Font name="Times New Roman Bold" size="14.399999618530273" />
+                                 </font>
+                              </Button>
+                              <Label layoutX="438.0" layoutY="183.0" prefHeight="20.0" prefWidth="94.0" text="Remaining:">
+                                 <font>
+                                    <Font name="VNtimes New Roman Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="labelQuantity" layoutX="531.0" layoutY="182.0" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Profile">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="585.0" fitWidth="1018.0" layoutX="-210.0" layoutY="-2.0" opacity="0.8" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Vice%20City.jpg" />
+                           </image>
+                        </ImageView>
+                        <AnchorPane layoutX="50.0" layoutY="52.0" prefHeight="460.0" prefWidth="700.0" style="-fx-background-color: #ffffff; -fx-background-radius: 20;">
+                           <children>
+                              <Label fx:id="username" layoutX="393.0" layoutY="70.0">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fx:id="guestS" fitHeight="150.0" fitWidth="200.0" layoutX="68.0" layoutY="73.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                                 <image>
+                                    <Image url="@../guest.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fx:id="regularS" fitHeight="150.0" fitWidth="168.0" layoutX="68.0" layoutY="73.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                                 <image>
+                                    <Image url="@../regular.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fx:id="VIPS" fitHeight="150.0" fitWidth="200.0" layoutX="68.0" layoutY="73.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                                 <image>
+                                    <Image url="@../vip.png" />
+                                 </image>
+                              </ImageView>
+                              <Label layoutX="300.0" layoutY="70.0" text="Username:">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="300.0" layoutY="100.0" text="Password:">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="300.0" layoutY="160.0" text="Name:">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="300.0" layoutY="190.0" text="Address:">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="300.0" layoutY="220.0" text="Phone:">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="300.0" layoutY="280.0" text="Number of Rentals:">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="300.0" layoutY="310.0" text="List of Rentals:">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="50.0" layoutY="280.0" text="Customer ID: ">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="50.0" layoutY="310.0" text="Customer Type: ">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="password" layoutX="393.0" layoutY="98.0" prefHeight="32.0" prefWidth="136.0" />
+                              <TextField fx:id="name" layoutX="393.0" layoutY="158.0" prefHeight="32.0" prefWidth="136.0" />
+                              <TextField fx:id="address" layoutX="393.0" layoutY="188.0" prefHeight="32.0" prefWidth="136.0" />
+                              <TextField fx:id="phone" layoutX="393.0" layoutY="218.0" prefHeight="32.0" prefWidth="136.0" />
+                              <Label fx:id="numberOfRentals" layoutX="461.0" layoutY="280.0">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <ListView fx:id="listOfRentals" layoutX="429.0" layoutY="310.0" prefHeight="131.0" prefWidth="136.0" />
+                              <Label fx:id="ID" layoutX="165.0" layoutY="280.0">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="customerType" layoutX="184.0" layoutY="310.0">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Button layoutX="50.0" layoutY="408.0" mnemonicParsing="false" onAction="#updateProfile" text="Update" />
+                              <Label fx:id="updateMessage" layoutX="148.0" layoutY="412.0" prefHeight="22.0" prefWidth="224.0" textFill="RED" />
+                              <Label layoutX="50.0" layoutY="340.0" text="Reward Point:">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="rewardPoint" layoutX="165.0" layoutY="340.0" prefHeight="27.0" prefWidth="86.0">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="50.0" layoutY="370.0" text="Return time:">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="returnCount" layoutX="159.0" layoutY="370.0">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <Button layoutX="710.0" mnemonicParsing="false" onAction="#switchToMainScene" prefHeight="32.0" prefWidth="74.0" text="Log out" textFill="#c300ff">
+         <font>
+            <Font name="System Bold" size="14.399999618530273" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

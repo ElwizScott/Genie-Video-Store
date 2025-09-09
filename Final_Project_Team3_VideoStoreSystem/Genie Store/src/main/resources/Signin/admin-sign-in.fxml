@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Signin.AdminSignInController">
+   <children>
+      <ImageView fitHeight="415.0" fitWidth="753.0" layoutX="-68.0" layoutY="-7.0" opacity="0.95" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Influenza.jpg" />
+         </image>
+      </ImageView>
+      <Button fx:id="signInBt" layoutX="266.0" layoutY="279.0" mnemonicParsing="false" onAction="#login" text="Sign in" textFill="#ff5600">
+         <font>
+            <Font name="System Bold" size="14.399999618530273" />
+         </font></Button>
+      <TextField fx:id="usernameText" layoutX="212.0" layoutY="168.0" />
+      <TextField fx:id="passwordText" layoutX="212.0" layoutY="200.0" />
+      <PasswordField fx:id="passwordHidden" layoutX="212.0" layoutY="200.0" />
+      <CheckBox fx:id="checkBox" layoutX="405.0" layoutY="205.0" mnemonicParsing="false" onAction="#changeVisibility" text="Show Password" textFill="WHITE" />
+      <Label layoutX="140.0" layoutY="173.0" text="Username:" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.399999618530273" />
+         </font></Label>
+      <Label layoutX="247.0" layoutY="86.0" text="ADMIN" textFill="#ff4600">
+         <font>
+            <Font name="Arial Bold" size="32.0" />
+         </font>
+      </Label>
+      <Label fx:id="errorMessage" layoutX="212.0" layoutY="244.0" prefHeight="22.0" prefWidth="179.0" textAlignment="CENTER" textFill="RED" />
+      <Button fx:id="accessBt" layoutX="231.0" layoutY="279.0" mnemonicParsing="false" onAction="#switchToAdminMenu" prefHeight="32.0" prefWidth="137.0" text="Access as admin" textFill="#ff4300" visible="false">
+         <font>
+            <Font name="Arial Bold" size="14.399999618530273" />
+         </font>
+      </Button>
+      <Label layoutX="140.0" layoutY="204.0" text="Password:" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.399999618530273" />
+         </font>
+      </Label>
+      <Button fx:id="signInBt1" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#switchToMainScene" text="Back" textFill="#ff5600">
+         <font>
+            <Font name="System Bold" size="14.399999618530273" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
